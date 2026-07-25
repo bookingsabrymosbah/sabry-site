@@ -255,4 +255,5 @@ p{margin:0 0 1em;}
   .dates-list li{ flex-wrap:wrap; }
   .hero{ background-position:25% center; }
   .concerts{ background-position:35% center; }
+  .news{ background-position:15% center; min-height:38vh; }
 }
