@@ -253,4 +253,6 @@ p{margin:0 0 1em;}
   .header-cta{ display:none; }
   .newsletter-form{ flex-direction:column; }
   .dates-list li{ flex-wrap:wrap; }
+  .hero{ background-position:25% center; }
+  .concerts{ background-position:35% center; }
 }
