@@ -180,8 +180,9 @@ p{margin:0 0 1em;}
 
 /* ---------- Concerts ---------- */
 .concerts{
-  position:relative; background-size:cover; background-position:center 20%;
-  padding:8em 1.5em;
+  position:relative; background-size:contain; background-position:center center;
+  background-repeat:no-repeat; background-color:#000;
+  padding:8em 1.5em; min-height:85vh;
 }
 .concerts-overlay{ position:absolute; inset:0; background:rgba(8,6,6,.72); }
 .concerts-content{ position:relative; z-index:2; max-width:var(--maxw); margin:0 auto; }
@@ -281,7 +282,7 @@ p{margin:0 0 1em;}
   .newsletter-form{ flex-direction:column; }
   .dates-list li{ flex-wrap:wrap; }
   .hero{ background-position:25% center; }
-  .concerts{ background-position:35% center; }
+  .concerts{ min-height:60vh; }
   .news{ background-position:15% center; min-height:38vh; }
   .contact-email{ font-size:1.1rem; }
 }
