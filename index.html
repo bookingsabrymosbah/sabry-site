@@ -78,7 +78,7 @@
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <p class="eyebrow">Bientôt disponible</p>
-      <h1><a href="#chanson">Galbah Samba</a></h1>
+      <h1 data-reveal-load="fade-up"><a href="#chanson">Galbah Samba</a></h1>
       <a href="#chanson" class="btn btn-outline">Découvrir le titre</a>
     </div>
     <div class="scroll-cue" aria-hidden="true">↓</div>
@@ -87,12 +87,14 @@
   <!-- NOUVEAU TITRE -->
   <section class="song-feature" id="chanson">
     <div class="song-feature-inner">
-      <a href="https://open.spotify.com/intl-fr/artist/186D4AlWOFcBqBzMNM2ayQ" target="_blank" rel="noopener" class="song-cover">
-        <img src="images/cover.jpg" alt="Pochette du single Galbah Samba">
-        <span class="play-icon" aria-hidden="true">▶</span>
-        <span class="soon-badge">Bientôt disponible</span>
+      <a href="https://open.spotify.com/intl-fr/artist/186D4AlWOFcBqBzMNM2ayQ" target="_blank" rel="noopener" class="song-cover" data-reveal="zoom">
+        <span class="song-cover-tilt">
+          <img src="images/cover.jpg" alt="Pochette du single Galbah Samba">
+          <span class="play-icon" aria-hidden="true">▶</span>
+          <span class="soon-badge">Bientôt disponible</span>
+        </span>
       </a>
-      <div class="song-info">
+      <div class="song-info" data-reveal="fade-right">
         <p class="eyebrow">Sortie prochaine</p>
         <h2>Galbah Samba</h2>
         <p class="song-text">
@@ -104,11 +106,23 @@
           tout en célébrant la résistance et la liberté.
           Écrit et composé par Halim Yousfi, produit par Sabry Mosbah.
         </p>
-        <div class="platform-links">
-          <a href="https://open.spotify.com/intl-fr/artist/186D4AlWOFcBqBzMNM2ayQ" target="_blank" rel="noopener">Spotify</a>
-          <a href="https://music.apple.com/us/artist/sabry-mosbah/1303616621" target="_blank" rel="noopener">Apple Music</a>
-          <a href="https://play.anghami.com/artist/2596010" target="_blank" rel="noopener">Anghami</a>
-          <a href="https://www.youtube.com/@mosbahsabry" target="_blank" rel="noopener">YouTube</a>
+        <div class="platform-links" data-reveal-stagger="90">
+          <a href="https://open.spotify.com/intl-fr/artist/186D4AlWOFcBqBzMNM2ayQ" target="_blank" rel="noopener" data-reveal="fade-up">
+            <span class="platform-label">Spotify</span>
+            <svg class="platform-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.36-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 10.02 15 10.68 18.72 12.96c.361.181.54.78.24 1.08zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+          </a>
+          <a href="https://music.apple.com/us/artist/sabry-mosbah/1303616621" target="_blank" rel="noopener" data-reveal="fade-up">
+            <span class="platform-label">Apple Music</span>
+            <svg class="platform-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.947 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.689 1.636-3.325 1.662-3.41-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zm3.53-3.257c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701z"/></svg>
+          </a>
+          <a href="https://play.anghami.com/artist/2596010" target="_blank" rel="noopener" data-reveal="fade-up">
+            <span class="platform-label">Anghami</span>
+            <span class="platform-icon anghami-icon"></span>
+          </a>
+          <a href="https://www.youtube.com/@mosbahsabry" target="_blank" rel="noopener" data-reveal="fade-up">
+            <span class="platform-label">YouTube</span>
+            <svg class="platform-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
         </div>
       </div>
     </div>
@@ -117,10 +131,10 @@
   <!-- A PROPOS -->
   <section class="about" id="apropos">
     <div class="about-inner">
-      <div class="about-portrait">
-        <img src="images/about.jpg" alt="Portrait de Sabry Mosbah">
+      <div class="about-portrait" data-reveal="fade-left">
+        <img src="images/about.jpg" alt="Portrait de Sabry Mosbah" loading="lazy">
       </div>
-      <div class="about-text">
+      <div class="about-text" data-reveal="fade-right">
         <p class="eyebrow">À propos</p>
         <h2>Une voix entre deux rives</h2>
         <p>
@@ -151,33 +165,33 @@
   <section class="concerts" id="concerts" style="background-image:url('images/concert-bg.jpg');">
     <div class="concerts-overlay"></div>
     <div class="concerts-content">
-      <p class="eyebrow">Sur scène</p>
-      <h2>En concert</h2>
-      <p class="concerts-text">
+      <p class="eyebrow" data-reveal="fade-up">Sur scène</p>
+      <h2 data-reveal="fade-up">En concert</h2>
+      <p class="concerts-text" data-reveal="fade-up">
         Sabry Mosbah se produit en formule voix-guitare ou accompagné de son
         groupe, dans les salles et festivals qui l'invitent à partager ses
         chansons en direct.
       </p>
 
-      <ul class="dates-list">
-        <li>
+      <ul class="dates-list" data-reveal-stagger="110">
+        <li data-reveal="fade-up">
           <span class="date">9 oct. 2026</span>
           <span class="venue">La Cave Poésie — Toulouse</span>
           <span class="btn btn-small btn-disabled">Billetterie bientôt disponible</span>
         </li>
-        <li>
+        <li data-reveal="fade-up">
           <span class="date">30 oct. 2026</span>
           <span class="venue">E-FEST Camp — Tataouine, Tunisie</span>
           <span class="btn btn-small btn-disabled">Billetterie bientôt disponible</span>
         </li>
-        <li>
+        <li data-reveal="fade-up">
           <span class="date">20 nov. 2026</span>
           <span class="venue">Balthazart — Tunis</span>
           <span class="btn btn-small btn-disabled">Billetterie bientôt disponible</span>
         </li>
       </ul>
 
-      <a href="#" class="btn btn-outline-light">Toutes les dates</a>
+      <a href="#" class="btn btn-outline-light" data-reveal="fade-up">Toutes les dates</a>
     </div>
   </section>
 
@@ -185,30 +199,42 @@
   <section class="news" id="actualites" style="background-image:url('images/actu-banner.jpg');">
     <div class="news-overlay"></div>
     <div class="news-content">
-      <p class="eyebrow">Actualités</p>
-      <h2><a href="https://www.instagram.com/mosbahsabry_official/" target="_blank" rel="noopener">Suivez l'actualité de Sabry Mosbah sur Instagram</a></h2>
+      <p class="eyebrow" data-reveal="fade-up">Actualités</p>
+      <h2 data-reveal="fade-up"><a href="https://www.instagram.com/mosbahsabry_official/" target="_blank" rel="noopener">Suivez l'actualité de Sabry Mosbah sur Instagram</a></h2>
     </div>
   </section>
 
   <!-- GALERIE -->
   <section class="gallery">
-    <div class="gallery-grid">
-      <img src="images/gallery1.jpg" alt="Sabry Mosbah en djellaba blanche, guitare à ses côtés">
-      <img src="images/gallery2.jpg" alt="Sabry Mosbah souriant, entouré de ses distinctions et récompenses">
-      <img src="images/gallery3.jpg" alt="Sabry Mosbah face au public, salle comble">
+    <div class="gallery-grid" data-reveal-stagger="130">
+      <figure class="gallery-item" data-reveal="fade-up">
+        <div class="media-parallax" data-parallax="0.09">
+          <img class="ken-burns" src="images/gallery1.jpg" alt="Sabry Mosbah en djellaba blanche, guitare à ses côtés" loading="lazy">
+        </div>
+      </figure>
+      <figure class="gallery-item" data-reveal="fade-up">
+        <div class="media-parallax" data-parallax="0.09">
+          <img class="ken-burns ken-burns--alt" src="images/gallery2.jpg" alt="Sabry Mosbah souriant, entouré de ses distinctions et récompenses" loading="lazy">
+        </div>
+      </figure>
+      <figure class="gallery-item" data-reveal="fade-up">
+        <div class="media-parallax" data-parallax="0.09">
+          <img class="ken-burns" src="images/gallery3.jpg" alt="Sabry Mosbah face au public, salle comble" loading="lazy">
+        </div>
+      </figure>
     </div>
   </section>
 
   <!-- CONTACT -->
   <section class="contact" id="contact">
-    <div class="contact-inner">
-      <p class="eyebrow">Contact</p>
-      <h2>Booking &amp; presse</h2>
-      <p class="contact-text">
+    <div class="contact-inner" data-reveal-stagger="90">
+      <p class="eyebrow" data-reveal="fade-up">Contact</p>
+      <h2 data-reveal="fade-up">Booking &amp; presse</h2>
+      <p class="contact-text" data-reveal="fade-up">
         Pour toute demande de booking, de presse ou de partenariat,
         écrivez directement à l'adresse suivante :
       </p>
-      <a href="mailto:booking.sabry.mosbah@gmail.com" class="contact-email">booking.sabry.mosbah@gmail.com</a>
+      <a href="mailto:booking.sabry.mosbah@gmail.com" class="contact-email" data-reveal="fade-up">booking.sabry.mosbah@gmail.com</a>
     </div>
   </section>
 
@@ -231,11 +257,24 @@
   </div>
 
   <nav class="footer-social">
-    <a href="https://www.youtube.com/@mosbahsabry" target="_blank" rel="noopener">YouTube</a>
-    <a href="https://open.spotify.com/intl-fr/artist/186D4AlWOFcBqBzMNM2ayQ" target="_blank" rel="noopener">Spotify</a>
-    <a href="https://music.apple.com/us/artist/sabry-mosbah/1303616621" target="_blank" rel="noopener">Apple Music</a>
-    <a href="https://play.anghami.com/artist/2596010" target="_blank" rel="noopener">Anghami</a>
-    <a href="https://www.instagram.com/mosbahsabry_official/" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://www.instagram.com/mosbahsabry_official/" target="_blank" rel="noopener" aria-label="Instagram">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C8.74 0 8.333.014 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.014 8.333 0 8.74 0 12s.014 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.986 8.74 24 12 24s3.667-.014 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.058-1.28.072-1.687.072-4.947s-.014-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.014 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.898 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.898-.421-.419-.69-.824-.9-1.38-.165-.42-.36-1.065-.421-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.256-1.816.421-2.236.21-.57.479-.96.9-1.379.419-.419.81-.689 1.379-.898.42-.165 1.051-.36 2.221-.421C8.415 2.176 8.795 2.16 12 2.16zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/></svg>
+    </a>
+    <a href="https://www.tiktok.com/@sabrymosbahofficial" target="_blank" rel="noopener" aria-label="TikTok">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.6 5.82c-1.12-1.08-1.67-2.64-1.75-4.17h-3.9v14.4c0 1.9-1.51 3.42-3.4 3.42-1.9 0-3.42-1.52-3.42-3.42 0-1.9 1.52-3.42 3.42-3.42.35 0 .69.06 1 .16V8.9a7.4 7.4 0 0 0-1-.07c-4.03 0-7.3 3.27-7.3 7.3s3.27 7.3 7.3 7.3 7.3-3.27 7.3-7.3v-7.3a9.4 9.4 0 0 0 5.65 1.87V6.7a5.6 5.6 0 0 1-3.9-1.6z" clip-rule="evenodd"/></svg>
+    </a>
+    <a href="https://open.spotify.com/intl-fr/artist/186D4AlWOFcBqBzMNM2ayQ" target="_blank" rel="noopener" aria-label="Spotify">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.36-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 10.02 15 10.68 18.72 12.96c.361.181.54.78.24 1.08zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+    </a>
+    <a href="https://music.apple.com/us/artist/sabry-mosbah/1303616621" target="_blank" rel="noopener" aria-label="Apple Music">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.947 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.689 1.636-3.325 1.662-3.41-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zm3.53-3.257c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701z"/></svg>
+    </a>
+    <a href="https://play.anghami.com/artist/2596010" target="_blank" rel="noopener" aria-label="Anghami">
+      <span class="anghami-icon"></span>
+    </a>
+    <a href="https://www.youtube.com/@mosbahsabry" target="_blank" rel="noopener" aria-label="YouTube">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+    </a>
   </nav>
 
   <p class="footer-copy">© 2026 Sabry Mosbah. Tous droits réservés.</p>
