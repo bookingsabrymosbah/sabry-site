@@ -263,6 +263,28 @@ if (menuToggle && mainNav) {
   });
 })();
 
+// Vidéo du hero : l'aller-retour est monté directement dans le fichier
+// (hero-pingpong.mp4 = hero.mp4 + hero-reverse.mp4 mis bout à bout), lu en
+// boucle native du navigateur. Le point de raccord est donc une vraie
+// coupe franche de montage, pas un bricolage en JavaScript : plus simple,
+// et fluide sur tous les navigateurs.
+(function(){
+  const video = document.getElementById('heroVideo');
+  if (!video) return;
+
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduced) return; // reste sur la première image, pas de lecture
+
+  // Filet de sécurité : si le navigateur met la vidéo en pause en plein
+  // milieu (throttling d'onglet en arrière-plan), on relance dès que
+  // l'onglet redevient actif au lieu de rester figé sur une image.
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'visible' && video.paused) {
+      video.play().catch(() => {});
+    }
+  });
+})();
+
 // Newsletter (démo locale, sans envoi réel)
 const newsletterForm = document.getElementById('newsletterForm');
 const newsletterThanks = document.getElementById('newsletterThanks');
