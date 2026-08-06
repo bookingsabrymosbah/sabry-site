@@ -107,14 +107,99 @@ p{margin:0 0 1em;}
 .hero{
   position:relative;
   min-height:100vh;
-  background-size:cover;
-  background-position:75% center;
   display:flex;
   align-items:flex-end;
+  overflow:hidden;
+  background:#0c0c0d;
 }
+
+/* ---- Couche 1 : sujet + fond, zoom-dolly quasi imperceptible ---- */
+.hero-bg{
+  position:absolute; inset:0;
+  background-size:cover;
+  background-position:75% center;
+  overflow:hidden;
+}
+.hero-video{
+  position:absolute; inset:0;
+  width:100%; height:100%; object-fit:cover; object-position:75% center;
+  filter:grayscale(1) contrast(1.08);
+  animation:heroDolly 24s ease-in-out infinite alternate;
+  transform-origin:75% 40%;
+  will-change:transform;
+}
+@keyframes heroDolly{
+  from{ transform:scale(1); }
+  to{ transform:scale(1.045); }
+}
+
+/* ---- Couche 2 : rayons de lumière qui dérivent lentement ---- */
+.hero-rays{
+  position:absolute; inset:0; pointer-events:none;
+  mix-blend-mode:screen; opacity:.3;
+  background:linear-gradient(100deg, transparent 30%, rgba(255,246,228,.14) 46%, transparent 62%);
+  background-size:220% 220%;
+  animation:heroRaysDrift 16s ease-in-out infinite alternate;
+}
+@keyframes heroRaysDrift{
+  from{ background-position:0% 10%; }
+  to{ background-position:90% 40%; }
+}
+
+/* ---- Couche 3 : grain de film constant ---- */
+.hero-grain{
+  position:absolute; inset:-20%; pointer-events:none;
+  opacity:.05; mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  background-size:220px 220px;
+  animation:heroGrainShift .5s steps(4) infinite;
+}
+@keyframes heroGrainShift{
+  0%{ transform:translate(0,0); }
+  25%{ transform:translate(-2%,1%); }
+  50%{ transform:translate(1%,-2%); }
+  75%{ transform:translate(-1%,2%); }
+  100%{ transform:translate(0,0); }
+}
+
+/* ---- Couche 4 : poussière en suspension dans le faisceau ---- */
+.hero-particles{ position:absolute; inset:0; pointer-events:none; overflow:hidden; }
+.hero-particles span{
+  position:absolute; bottom:10%;
+  width:3px; height:3px; border-radius:50%;
+  background:rgba(255,252,244,.55);
+  opacity:0;
+  animation:heroDust linear infinite;
+}
+.hero-particles span:nth-child(1){ left:58%; animation-duration:9s; animation-delay:0s; --dx:14px; }
+.hero-particles span:nth-child(2){ left:66%; animation-duration:11s; animation-delay:1.2s; --dx:-10px; }
+.hero-particles span:nth-child(3){ left:62%; animation-duration:8s; animation-delay:2.4s; --dx:8px; }
+.hero-particles span:nth-child(4){ left:72%; animation-duration:13s; animation-delay:.6s; --dx:-16px; }
+.hero-particles span:nth-child(5){ left:54%; animation-duration:10s; animation-delay:3.1s; --dx:12px; }
+.hero-particles span:nth-child(6){ left:68%; animation-duration:12s; animation-delay:1.8s; --dx:-6px; }
+.hero-particles span:nth-child(7){ left:60%; animation-duration:9.5s; animation-delay:4s; --dx:10px; }
+@keyframes heroDust{
+  0%{ transform:translate(0,0); opacity:0; }
+  12%{ opacity:.55; }
+  85%{ opacity:.2; }
+  100%{ transform:translate(var(--dx,10px), -70vh); opacity:0; }
+}
+
+/* ---- Couche 5 : respiration douce charbon / gris chaud ---- */
 .hero-overlay{
   position:absolute; inset:0;
   background:linear-gradient(to top, rgba(6,6,7,.92) 0%, rgba(6,6,7,.35) 45%, rgba(6,6,7,.15) 70%);
+  animation:heroBreathe 10s ease-in-out infinite alternate;
+}
+@keyframes heroBreathe{
+  from{ background-color:rgba(10,9,8,0); }
+  to{ background-color:rgba(70,63,54,.10); }
+}
+
+@media (prefers-reduced-motion: reduce){
+  .hero-bg, .hero-video, .hero-rays, .hero-grain, .hero-overlay, .hero-particles span{
+    animation:none !important;
+  }
 }
 .hero-content{
   position:relative; z-index:2;
@@ -331,7 +416,8 @@ p{margin:0 0 1em;}
   .header-cta{ display:none; }
   .newsletter-form{ flex-direction:column; }
   .dates-list li{ flex-wrap:wrap; }
-  .hero{ background-position:25% center; }
+  .hero-bg{ background-position:25% center; }
+  .hero-video{ object-position:25% center; }
   .concerts{ min-height:60vh; }
   .news{ background-position:15% center; min-height:38vh; }
   .contact-email{ font-size:1.1rem; }
