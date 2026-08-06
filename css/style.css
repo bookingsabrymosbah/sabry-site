@@ -188,7 +188,7 @@ p{margin:0 0 1em;}
 /* ---- Couche 5 : respiration douce charbon / gris chaud ---- */
 .hero-overlay{
   position:absolute; inset:0;
-  background:linear-gradient(to top, rgba(6,6,7,.92) 0%, rgba(6,6,7,.35) 45%, rgba(6,6,7,.15) 70%);
+  background:linear-gradient(to top, #0c0c0d 0%, rgba(6,6,7,.92) 6%, rgba(6,6,7,.35) 45%, rgba(6,6,7,.15) 70%);
   animation:heroBreathe 10s ease-in-out infinite alternate;
 }
 @keyframes heroBreathe{
@@ -298,7 +298,14 @@ p{margin:0 0 1em;}
   background-repeat:no-repeat; background-color:#000;
   padding:8em 1.5em; min-height:85vh;
 }
-.concerts-overlay{ position:absolute; inset:0; background:rgba(8,6,6,.72); }
+.concerts-overlay{
+  position:absolute; inset:0;
+  background:linear-gradient(to bottom,
+    #0c0c0d 0%,
+    rgba(8,6,6,.75) 12%,
+    rgba(8,6,6,.72) 88%,
+    #0b0b0c 100%);
+}
 .concerts-content{ position:relative; z-index:2; max-width:var(--maxw); margin:0 auto; }
 .concerts h2{ font-size:2.2rem; font-weight:400; letter-spacing:.015em; }
 .concerts-text{ color:var(--text-dim); max-width:50ch; margin-bottom:2.2em; }
@@ -311,18 +318,15 @@ p{margin:0 0 1em;}
 .dates-list .venue{ flex:1; font-size:1rem; }
 
 /* ---------- News banner ---------- */
-.news{
-  position:relative; background-size:cover; background-position:center;
-  min-height:52vh; display:flex; align-items:flex-end;
-}
-.news-overlay{ position:absolute; inset:0; background:linear-gradient(to top, rgba(6,6,7,.9), rgba(6,6,7,.15)); }
-.news-content{ position:relative; z-index:2; max-width:var(--maxw); margin:0 auto; width:100%; padding:0 1.5em 3.5em; }
+.news{ background:linear-gradient(to bottom, #4a4a4a 0%, #000 100%); }
+.news-img{ display:block; width:100%; height:auto; }
+.news-content{ max-width:var(--maxw); margin:0 auto; width:100%; padding:2em 1.5em 3.5em; }
 .news h2{ font-size:clamp(.95rem,1.6vw,1.3rem); font-weight:400; letter-spacing:.015em; max-width:20ch; }
 .news h2 a{ border-bottom:1px solid var(--accent); }
 .news h2 a:hover{ color:var(--accent); }
 
 /* ---------- Contact ---------- */
-.contact{ padding:7em 1.5em; background:var(--bg); text-align:center; }
+.contact{ padding:7em 1.5em; background:linear-gradient(to bottom, #0b0b0c 0%, #000 100%); text-align:center; }
 .contact-inner{ max-width:640px; margin:0 auto; }
 .contact h2{ font-size:1.5rem; font-weight:400; letter-spacing:.015em; }
 .contact-text{ color:var(--text-dim); }
@@ -420,7 +424,6 @@ p{margin:0 0 1em;}
   .hero-bg{ background-position:25% center; }
   .hero-video{ object-position:25% center; }
   .concerts{ min-height:60vh; background-position:35% center; }
-  .news{ background-position:15% center; min-height:38vh; }
   .contact-email{ font-size:1.1rem; }
 }
 
